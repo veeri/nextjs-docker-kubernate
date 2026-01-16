@@ -1,0 +1,27 @@
+{
+    "auto-close-tag.disableOnLanguage": [
+        
+    ],
+    // Disable built-in YAML validation for Helm templates
+    "yaml.validate": false,
+
+    // Enable Red Hat YAML extension schema support selectively
+    "yaml.schemas": {
+        "kubernetes": ["*.yaml", "*.yml"]
+    },
+
+    // Enable Helm IntelliSense extension features
+    "helm.experimental.templateValidation": true,
+
+    // Optional: Auto-detect Helm files for proper IntelliSense
+    "files.associations": {
+        "*.tpl": "helm",
+        "*.yaml": "yaml"
+    },
+
+    // Optional: Reduce lint noise for Helm template files
+    "[yaml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    }
+}
