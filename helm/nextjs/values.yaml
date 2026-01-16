@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: nextjs-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  className: nginx
+  hosts:
+    - host: nextjs.local
+      paths:
+        - path: /
+          pathType: Prefix
+
+resources: {}
