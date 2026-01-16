@@ -14,7 +14,7 @@ docker images | grep web-nextjs-mfe
 minikube service nextjs
 
 ## 2. Check Load balance by adding more load
-*check the commit for changes*
+*check the [commit](https://github.com/veeri/nextjs-docker-kubernate/commit/2678607127376cc5e67514c8f6d2dc00b1a8a212) for changes*
 
 #### Generate CPU load inside pod
 kubectl exec -it deploy/nextjs -- sh
